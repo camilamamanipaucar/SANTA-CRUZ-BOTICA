@@ -27,6 +27,7 @@ public class Producto {
     private Integer precioUnitario;
 
     @JoinColumn(name = "idCategoria", referencedColumnName = "idCategoria", insertable = false, updatable = false)
+    //@ManyToOne(fetch = FetchType.EAGER)
     @ManyToOne(fetch = FetchType.LAZY)
     private Categoria categoria;
     private Integer Stock;

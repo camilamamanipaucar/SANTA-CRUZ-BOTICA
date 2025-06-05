@@ -47,4 +47,3 @@ spring:
           predicates:
             - Path=/trabajadores/**
             - Path=/clientes/**
-            - Path=/cargos/**

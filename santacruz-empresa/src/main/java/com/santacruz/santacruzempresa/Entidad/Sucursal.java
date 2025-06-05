@@ -21,8 +21,9 @@ public class Sucursal {
     private String telefono;
     private String Whatsapp;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "idEmpresa", nullable = false)
+
+    @JoinColumn(name = "idEmpresa",referencedColumnName = "idEmpresa",nullable = false)
+    @ManyToOne(fetch = FetchType.EAGER)
     private Empresa empresa;
 
 }
