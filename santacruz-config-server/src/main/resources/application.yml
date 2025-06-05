@@ -8,7 +8,7 @@ spring:
     config:
       server:
         git:
-          # ruta de tuuuu repositorio git :V
+          # ruta de tuuuu repositorio git :Va
           uri: https://github.com/keinraf/Microservicios-KEVINRAF-MANUAL.git
           searchPaths: config-data
           default-label: main
