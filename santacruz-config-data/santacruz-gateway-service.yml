@@ -23,27 +23,39 @@ spring:
             - Path=/ventas/**
             - Path=/mediodepagos/**
             - Path=/ventadetalles/**
+          filters:
+            - AuthFilter
 
         - id: santacruz-compra-service
           uri: lb://santacruz-compra-service
           predicates:
             - Path=/compras/**
             - Path=/compradetalles/**
+          filters:
+            - AuthFilter
 
         - id: santacruz-almacen-service
           uri: lb://santacruz-almacen-service
           predicates:
             - Path=/productos/**
             - Path=/categorias/**
+          filters:
+            - AuthFilter
 
         - id: santacruz-empresa-service
           uri: lb://santacruz-empresa-service
           predicates:
             - Path=/sucursales/**
             - Path=/empresas/**
+          filters:
+            - AuthFilter
 
         - id: santacruz-usuario-service
           uri: lb://santacruz-usuario-service
           predicates:
             - Path=/trabajadores/**
             - Path=/clientes/**
+          filters:
+            - AuthFilter
+
+        - id:
