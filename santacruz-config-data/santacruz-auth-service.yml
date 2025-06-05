@@ -3,18 +3,24 @@ server:
   port: ${PORT:${SERVERS_PORT:0}}
 
 spring:
+  application:
+  #name: hlca-curso-servicio
+  jpa:
+    hibernate.ddl-auto: update
+    generate-ddl: true
+    show-sql: true
   datasource:
-    url: jdbc:h2:mem:santacruz-auth
-    driver-class-name: org.h2.Driver
-    username: camila
-    password: rosa
-    jpa:
-      database-platform: org.hibernate.dialect.H2Dialect
-    h2:
-      console:
-        enabled: true
-        path: /h2-console
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/santacruz_auth
+    username: root
+    password:
 
+springdoc:
+  api-docs:
+    enabled: true
+  swagger-ui:
+    enabled: true
+    path: /doc/swagger-ui.html
 eureka:
   client:
     serviceUrl:
@@ -23,3 +29,5 @@ eureka:
   instance:
 
     instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+jwt:
+  secret: secret
