@@ -1,0 +1,37 @@
+server:
+  port: 8085
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8090/eureka
+  instance:
+    hostname: localhost
+
+spring:
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enable: true
+      routes:
+        - id: santacruz-venta-service
+          uri: lb://santacruz-venta-service
+          predicates:
+            - Path=/ventas/**
+        - id: santacruz-compra-service
+          uri: lb://santacruz-compra-service
+          predicates:
+            - Path=/compras/**
+        - id: santacruz-almacen-service
+          uri: lb://santacruz-almacen-service
+          predicates:
+            - Path=/almacenes/**
+        - id: santacruz-empresa-service
+          uri: lb://santacruz-empresa-service
+          predicates:
+            - Path=/empresas/**
+        - id: santacruz-usuario-service
+          uri: lb://santacruz-usuario-service
+          predicates:
+            - Path=/usuarios/**
