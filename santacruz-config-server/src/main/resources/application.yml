@@ -9,7 +9,7 @@ spring:
       server:
         git:
           uri: https://github.com/camilamamanipaucar/SANTA-CRUZ-BOTICA.git
-          searchPaths: santacruz-config-data
+          searchPaths: config-data
           default-label: Principal
   security:
     user:

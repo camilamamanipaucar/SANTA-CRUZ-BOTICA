@@ -4,4 +4,4 @@ spring:
   profiles:
     active: development
   config:
-    import: optional:santacruzconfigserver:http://camila:rosa@localhost:7070
+    import: optional:configserver:http://camila:rosa@localhost:7070

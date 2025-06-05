@@ -1,4 +1,7 @@
 package com.santacruz.santacruzventa.Repositorio;
 
-public interface MetodoDePagoRepositorio {
+import com.santacruz.santacruzventa.Entidad.MetodoDePago;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface MetodoDePagoRepositorio extends JpaRepository<MetodoDePago, Long> {
 }

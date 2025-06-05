@@ -1,4 +1,7 @@
 package com.santacruz.santacruzventa.Repositorio;
 
-public interface VentaRepositorio {
+import com.santacruz.santacruzventa.Entidad.Venta;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface VentaRepositorio extends JpaRepository<Venta, Long> {
 }
